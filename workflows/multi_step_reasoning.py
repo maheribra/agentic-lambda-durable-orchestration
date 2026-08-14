@@ -235,6 +235,9 @@ def handler(
         name="mcp_enrichment",
     )
 
+    if document_id == "DOC-CRASH-001" and not context.is_replaying:
+        raise RuntimeError("SIMULATED_WORKFLOW_CRASH")
+
     routing = context.step(
         route_document(
             scoring["risk_level"],

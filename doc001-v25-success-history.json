@@ -1,0 +1,264 @@
+{
+    "Events": [
+        {
+            "EventType": "ExecutionStarted",
+            "EventId": 1,
+            "Id": "ccc526bb-7193-38fd-bdd9-29b18ee971fc",
+            "Name": "b6c4c4b4-0b7c-41ff-8fa3-32ad8b5ec2b7",
+            "EventTimestamp": "2026-08-17T07:17:49.380000+01:00",
+            "ExecutionStartedDetails": {
+                "Input": {
+                    "Truncated": true
+                },
+                "ExecutionTimeout": 3600
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 2,
+            "Id": "1ced8f5be2db23a6513eba4d819c73806424748a7bc6fa0d792cc1c7d1775a97",
+            "Name": "prepare_document",
+            "EventTimestamp": "2026-08-17T07:17:51.201000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 3,
+            "Id": "1ced8f5be2db23a6513eba4d819c73806424748a7bc6fa0d792cc1c7d1775a97",
+            "Name": "prepare_document",
+            "EventTimestamp": "2026-08-17T07:17:51.201000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 4,
+            "Id": "c5faca15ac2f93578b39ef4b6bbb871bdedce4ddd584fd31f0bb66fade3947e6",
+            "Name": "analyze_document",
+            "EventTimestamp": "2026-08-17T07:17:51.360000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 5,
+            "Id": "c5faca15ac2f93578b39ef4b6bbb871bdedce4ddd584fd31f0bb66fade3947e6",
+            "Name": "analyze_document",
+            "EventTimestamp": "2026-08-17T07:17:51.360000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 6,
+            "Id": "6f760b9e9eac89f07ab0223b0f4acb04d1e355d893a1b86a83f4d4b405adee99",
+            "Name": "score_document",
+            "EventTimestamp": "2026-08-17T07:17:51.497000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 7,
+            "Id": "6f760b9e9eac89f07ab0223b0f4acb04d1e355d893a1b86a83f4d4b405adee99",
+            "Name": "score_document",
+            "EventTimestamp": "2026-08-17T07:17:51.497000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 8,
+            "Id": "e8e70dc170e14333627b32c20ac6051fb9b6bd369c036afbaca2d9cd7ac3de65",
+            "Name": "mcp_enrichment",
+            "EventTimestamp": "2026-08-17T07:17:51.641000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 9,
+            "Id": "e8e70dc170e14333627b32c20ac6051fb9b6bd369c036afbaca2d9cd7ac3de65",
+            "Name": "mcp_enrichment",
+            "EventTimestamp": "2026-08-17T07:17:51.641000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 10,
+            "Id": "73776e3e4cd3684316d26ec93cc6c438497ace5b08e359698667af6dbded88b6",
+            "Name": "simulated_runtime_crash",
+            "EventTimestamp": "2026-08-17T07:17:51.781000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 11,
+            "Id": "73776e3e4cd3684316d26ec93cc6c438497ace5b08e359698667af6dbded88b6",
+            "Name": "simulated_runtime_crash",
+            "EventTimestamp": "2026-08-17T07:17:51.781000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 12,
+            "Id": "8d322d4b02d9fcfb05bc70e486406e53c3cf9b97a252bf64752cafc5c2aaf95b",
+            "Name": "route_document",
+            "EventTimestamp": "2026-08-17T07:17:51.956000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 13,
+            "Id": "8d322d4b02d9fcfb05bc70e486406e53c3cf9b97a252bf64752cafc5c2aaf95b",
+            "Name": "route_document",
+            "EventTimestamp": "2026-08-17T07:17:51.956000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 14,
+            "Id": "d5c47f63555ae063383c2a0df82bf309d90932bc8dd66a056d80e4d913e821fa",
+            "Name": "process_approved_document",
+            "EventTimestamp": "2026-08-17T07:17:52.094000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 15,
+            "Id": "d5c47f63555ae063383c2a0df82bf309d90932bc8dd66a056d80e4d913e821fa",
+            "Name": "process_approved_document",
+            "EventTimestamp": "2026-08-17T07:17:52.094000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 16,
+            "Id": "818af2ae014b14c85a35639901ac6bfc47908bcbd94a7f5211627b1f52f316a9",
+            "Name": "simulated_recovery_step",
+            "EventTimestamp": "2026-08-17T07:17:52.235000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 17,
+            "Id": "818af2ae014b14c85a35639901ac6bfc47908bcbd94a7f5211627b1f52f316a9",
+            "Name": "simulated_recovery_step",
+            "EventTimestamp": "2026-08-17T07:17:52.235000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 18,
+            "Id": "2b57bf7664a4de943d93e4f5473a42da0d7a35065afd559303196fcc33414e73",
+            "Name": "audit_record",
+            "EventTimestamp": "2026-08-17T07:17:52.375000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 19,
+            "Id": "2b57bf7664a4de943d93e4f5473a42da0d7a35065afd559303196fcc33414e73",
+            "Name": "audit_record",
+            "EventTimestamp": "2026-08-17T07:17:52.375000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "InvocationCompleted",
+            "EventId": 20,
+            "EventTimestamp": "2026-08-17T07:17:52.503000+01:00",
+            "InvocationCompletedDetails": {
+                "StartTimestamp": "2026-08-17T07:17:49.419000+01:00",
+                "EndTimestamp": "2026-08-17T07:17:52.494000+01:00",
+                "RequestId": "d607ef88-5bd8-4c51-9ca7-20795bc29447"
+            }
+        },
+        {
+            "EventType": "ExecutionSucceeded",
+            "EventId": 21,
+            "Id": "ccc526bb-7193-38fd-bdd9-29b18ee971fc",
+            "Name": "b6c4c4b4-0b7c-41ff-8fa3-32ad8b5ec2b7",
+            "EventTimestamp": "2026-08-17T07:17:52.503000+01:00",
+            "ExecutionSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                }
+            }
+        }
+    ]
+}

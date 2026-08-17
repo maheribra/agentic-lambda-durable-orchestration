@@ -1,0 +1,181 @@
+{
+    "Events": [
+        {
+            "EventType": "ExecutionStarted",
+            "EventId": 1,
+            "Id": "bea8dc28-b8ab-38b2-a275-6f2c67e7d05e",
+            "Name": "a2aa0a7a-e71b-425b-b53f-7b839942d058",
+            "EventTimestamp": "2026-08-17T07:01:22.545000+01:00",
+            "ExecutionStartedDetails": {
+                "Input": {
+                    "Truncated": true
+                },
+                "ExecutionTimeout": 3600
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 2,
+            "Id": "1ced8f5be2db23a6513eba4d819c73806424748a7bc6fa0d792cc1c7d1775a97",
+            "Name": "prepare_document",
+            "EventTimestamp": "2026-08-17T07:01:24.575000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 3,
+            "Id": "1ced8f5be2db23a6513eba4d819c73806424748a7bc6fa0d792cc1c7d1775a97",
+            "Name": "prepare_document",
+            "EventTimestamp": "2026-08-17T07:01:24.575000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 4,
+            "Id": "c5faca15ac2f93578b39ef4b6bbb871bdedce4ddd584fd31f0bb66fade3947e6",
+            "Name": "analyze_document",
+            "EventTimestamp": "2026-08-17T07:01:24.717000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 5,
+            "Id": "c5faca15ac2f93578b39ef4b6bbb871bdedce4ddd584fd31f0bb66fade3947e6",
+            "Name": "analyze_document",
+            "EventTimestamp": "2026-08-17T07:01:24.717000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 6,
+            "Id": "6f760b9e9eac89f07ab0223b0f4acb04d1e355d893a1b86a83f4d4b405adee99",
+            "Name": "score_document",
+            "EventTimestamp": "2026-08-17T07:01:24.875000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 7,
+            "Id": "6f760b9e9eac89f07ab0223b0f4acb04d1e355d893a1b86a83f4d4b405adee99",
+            "Name": "score_document",
+            "EventTimestamp": "2026-08-17T07:01:24.875000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "StepStarted",
+            "SubType": "Step",
+            "EventId": 8,
+            "Id": "e8e70dc170e14333627b32c20ac6051fb9b6bd369c036afbaca2d9cd7ac3de65",
+            "Name": "mcp_enrichment",
+            "EventTimestamp": "2026-08-17T07:01:25.012000+01:00",
+            "StepStartedDetails": {}
+        },
+        {
+            "EventType": "StepSucceeded",
+            "SubType": "Step",
+            "EventId": 9,
+            "Id": "e8e70dc170e14333627b32c20ac6051fb9b6bd369c036afbaca2d9cd7ac3de65",
+            "Name": "mcp_enrichment",
+            "EventTimestamp": "2026-08-17T07:01:25.012000+01:00",
+            "StepSucceededDetails": {
+                "Result": {
+                    "Truncated": true
+                },
+                "RetryDetails": {
+                    "CurrentAttempt": 1
+                }
+            }
+        },
+        {
+            "EventType": "InvocationCompleted",
+            "EventId": 10,
+            "EventTimestamp": "2026-08-17T07:01:25.038000+01:00",
+            "InvocationCompletedDetails": {
+                "StartTimestamp": "2026-08-17T07:01:22.586000+01:00",
+                "EndTimestamp": "2026-08-17T07:01:25.033000+01:00",
+                "RequestId": "8832e520-8b0a-49d1-97c4-d2f461b947e8",
+                "Error": {
+                    "Truncated": true
+                }
+            }
+        },
+        {
+            "EventType": "InvocationCompleted",
+            "EventId": 11,
+            "EventTimestamp": "2026-08-17T07:01:27.141000+01:00",
+            "InvocationCompletedDetails": {
+                "StartTimestamp": "2026-08-17T07:01:26.062000+01:00",
+                "EndTimestamp": "2026-08-17T07:01:27.133000+01:00",
+                "RequestId": "ac1b51d6-74e7-4d34-9eff-e7c3465205c2",
+                "Error": {
+                    "Truncated": true
+                }
+            }
+        },
+        {
+            "EventType": "InvocationCompleted",
+            "EventId": 12,
+            "EventTimestamp": "2026-08-17T07:01:29.252000+01:00",
+            "InvocationCompletedDetails": {
+                "StartTimestamp": "2026-08-17T07:01:28.169000+01:00",
+                "EndTimestamp": "2026-08-17T07:01:29.247000+01:00",
+                "RequestId": "58922fe3-b301-4c08-a092-8c34784b6839",
+                "Error": {
+                    "Truncated": true
+                }
+            }
+        },
+        {
+            "EventType": "InvocationCompleted",
+            "EventId": 13,
+            "EventTimestamp": "2026-08-17T07:01:31.384000+01:00",
+            "InvocationCompletedDetails": {
+                "StartTimestamp": "2026-08-17T07:01:30.281000+01:00",
+                "EndTimestamp": "2026-08-17T07:01:31.379000+01:00",
+                "RequestId": "00ef25bf-9036-4dba-b86f-a073b1d80e69",
+                "Error": {
+                    "Truncated": true
+                }
+            }
+        },
+        {
+            "EventType": "ExecutionFailed",
+            "EventId": 14,
+            "Id": "bea8dc28-b8ab-38b2-a275-6f2c67e7d05e",
+            "Name": "a2aa0a7a-e71b-425b-b53f-7b839942d058",
+            "EventTimestamp": "2026-08-17T07:01:31.384000+01:00",
+            "ExecutionFailedDetails": {
+                "Error": {
+                    "Truncated": true
+                }
+            }
+        }
+    ]
+}

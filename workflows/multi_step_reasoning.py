@@ -86,6 +86,29 @@ def mcp_enrichment(
 
 
 @durable_step
+def simulated_runtime_crash(
+    context: DurableContext,
+    document_id: str,
+) -> dict:
+    import os
+
+    # Durable SDK exposes the current step attempt through
+    # the logger metadata created by StepOperationExecutor.
+    attempt = context.logger._default_extra.get("attempt", 1)
+
+    # Deliberately terminate the Lambda runtime only on the
+    # first attempt for the dedicated crash-recovery test.
+    if document_id == "DOC-CRASH-001" and attempt == 1:
+        os._exit(1)
+
+    return {
+        "status": "runtime-recovered",
+        "document_id": document_id,
+        "attempt": attempt,
+    }
+
+
+@durable_step
 def route_document(
     context: DurableContext,
     risk_level: str,
@@ -235,10 +258,11 @@ def handler(
         name="mcp_enrichment",
     )
 
-    if document_id == "DOC-CRASH-001":
-        import os
-        os._exit(1)
-        
+    crash_test = context.step(
+        simulated_runtime_crash(document_id),
+        name="simulated_runtime_crash",
+    )
+
     routing = context.step(
         route_document(
             scoring["risk_level"],
@@ -285,6 +309,7 @@ def handler(
         "analysis": analysis,
         "scoring": scoring,
         "enrichment": enrichment,
+        "crash_test": crash_test,
         "routing": routing,
         "approval": approval,
         "processing": processing,

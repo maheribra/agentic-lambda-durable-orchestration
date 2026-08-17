@@ -227,10 +227,22 @@ Tests cover:
 * deterministic LOW/HIGH routing
 * human approval callbacks
 * step-level retry behavior
+* MCP-style enrichment
+* audit record generation
 * runtime crash and checkpoint persistence
 * durable execution history inspection
 
+The final deployed workflow was verified on AWS Lambda function version `25`.
+
+Evidence includes:
+
+* `doc001-v25-success-history.json` — successful LOW-risk end-to-end execution
+* `high-v25-approved-history.json` — HIGH-risk routing, human approval callback, processing, recovery, and audit completion
+* `crash-v24-history.json` — runtime crash and checkpoint persistence evidence
+
 Execution histories are inspected using AWS Lambda Durable Execution APIs.
+
+The project deliberately distinguishes between step-level retry and whole-execution runtime recovery. Automatic replay of an already failed execution is not claimed because it was not demonstrated by the available test evidence.
 
 ## Engineering Focus
 

@@ -244,6 +244,30 @@ Execution histories are inspected using AWS Lambda Durable Execution APIs.
 
 The project deliberately distinguishes between step-level retry and whole-execution runtime recovery. Automatic replay of an already failed execution is not claimed because it was not demonstrated by the available test evidence.
 
+### Automated Unit Tests
+
+The repository also includes automated unit tests for deterministic workflow logic.
+
+Run:
+
+    python -m pytest -q
+
+Current result:
+
+* **6 tests passed**
+* **0 tests failed**
+
+The tests cover:
+
+* LOW/HIGH risk classification
+* deterministic routing
+* approved-document processing
+* audit-record generation
+
+Test implementation:
+
+`tests/test_workflow_logic.py`
+
 ## Engineering Focus
 
 This project is designed to demonstrate practical AWS serverless engineering through a realistic agentic document-review workflow.

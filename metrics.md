@@ -6,6 +6,21 @@ Measured from real AWS Lambda Durable Functions executions using deployed functi
 
 These metrics are based on execution histories and AWS Lambda durable execution APIs rather than estimated values.
 
+## Automated Test Metrics
+
+| Metric | Measured Result |
+|---|---:|
+| Automated unit tests | 6 |
+| Tests passed | 6 |
+| Tests failed | 0 |
+| Test command | `python -m pytest -q` |
+
+The unit tests cover deterministic workflow logic including risk classification, routing, approved-document processing, and audit-record generation.
+
+Evidence:
+
+`tests/test_workflow_logic.py`
+
 ## Workflow Metrics
 
 | Metric | Measured Result | Evidence |

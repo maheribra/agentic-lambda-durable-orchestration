@@ -20,12 +20,7 @@ from aws_durable_execution_sdk_python.retries import (
 
 from tools.mcp_tool_bindings import enrich_document
 
-
-@durable_step
-def prepare_document(
-    context: DurableContext,
-    document_id: str,
-) -> dict:
+def build_prepared_document(document_id: str) -> dict:
     return {
         "document_id": document_id,
         "status": "prepared",
@@ -33,11 +28,7 @@ def prepare_document(
     }
 
 
-@durable_step
-def analyze_document(
-    context: DurableContext,
-    prepared_document: dict,
-) -> dict:
+def analyze_prepared_document(prepared_document: dict) -> dict:
     document_id = prepared_document["document_id"]
 
     if document_id.startswith("DOC-HIGH"):
@@ -57,11 +48,7 @@ def analyze_document(
     }
 
 
-@durable_step
-def score_document(
-    context: DurableContext,
-    analysis: dict,
-) -> dict:
+def calculate_risk(analysis: dict) -> dict:
     quality_score = analysis["quality_score"]
 
     if quality_score >= 0.8:
@@ -74,6 +61,50 @@ def score_document(
         "risk_level": risk_level,
         "score": quality_score,
     }
+
+
+def determine_route(risk_level: str) -> dict:
+    if risk_level == "HIGH":
+        route = "human-review"
+    else:
+        route = "standard-processing"
+
+    return {
+        "risk_level": risk_level,
+        "route": route,
+    }
+
+
+@durable_step
+def prepare_document(
+    context: DurableContext,
+    document_id: str,
+) -> dict:
+    return build_prepared_document(document_id)
+
+
+@durable_step
+def analyze_document(
+    context: DurableContext,
+    prepared_document: dict,
+) -> dict:
+    return analyze_prepared_document(prepared_document)
+
+
+@durable_step
+def score_document(
+    context: DurableContext,
+    analysis: dict,
+) -> dict:
+    return calculate_risk(analysis)
+
+
+@durable_step
+def route_document(
+    context: DurableContext,
+    risk_level: str,
+) -> dict:
+    return determine_route(risk_level)
 
 
 @durable_step
@@ -106,23 +137,6 @@ def simulated_runtime_crash(
         "document_id": document_id,
         "attempt": attempt,
     }
-
-
-@durable_step
-def route_document(
-    context: DurableContext,
-    risk_level: str,
-) -> dict:
-    if risk_level == "HIGH":
-        route = "human-review"
-    else:
-        route = "standard-processing"
-
-    return {
-        "risk_level": risk_level,
-        "route": route,
-    }
-
 
 def submit_for_human_approval(
     callback_id: str,
